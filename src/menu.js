@@ -2,6 +2,7 @@ import restaurantImage from "./images-and-fonts/edited.png"
 import cloud from "./images-and-fonts/noun-japan-cloud-6729222.svg";
 import cloud2 from "./images-and-fonts/noun-cloud-5390848.svg";
 import wave from "./images-and-fonts/4949956_94229.svg";
+import {menuData} from "./menu-data";
 
 export default function loadMenu() {
   const content = document.querySelector('#content');
@@ -54,12 +55,29 @@ export default function loadMenu() {
 
   const menuItems = document.createElement('ul');
 
-  const items = ['Signature Ramen', 'Toppings & Add-ons', 'Side Dishes', 'Beverages'];
-  items.forEach((item) => {
-    const menuCategory = document.createElement('li');
-    menuCategory.classList.add('menuCategory')
-    menuCategory.textContent = item;
-    menuItems.appendChild(menuCategory);
+  const items = menuData;
+  items.forEach((category) => {
+    const categoryElement = document.createElement('li');
+    categoryElement.textContent = category.category;
+    categoryElement.classList.add('menuCategory');
+    menuItems.appendChild(categoryElement)
+    
+    const sublist = document.createElement('ul');
+    sublist.classList.add('subMenu'); // Add a class for styling sub-items
+
+    category.items.forEach((item) => {
+      const itemElement = document.createElement('li');
+      itemElement.textContent = item.name;
+      itemElement.classList.add('menuItem');
+      
+      const price = document.createElement('p');
+      price.classList.add('price');
+      price.textContent = item.price;
+
+      sublist.appendChild(itemElement);
+      itemElement.appendChild(price)
+      categoryElement.appendChild(sublist);
+    })
   });
   
 

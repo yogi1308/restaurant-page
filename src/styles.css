@@ -36,7 +36,8 @@ body {
 }
 
 .contentText h1 {
-    font-size: 32px;
+    font-size: 38px;
+    margin-bottom: 0px;
 }
 
 .contentText p {
@@ -147,6 +148,25 @@ nav {
 .menuCategory {
     list-style-type: none;
     border-bottom: 2px dotted black;
+    font-size: 28px;
+}
+
+.subMenu {
+    list-style-type: none;
+    font-size: 18px;
+    margin: 10px;
+    text-align: left;
+}
+
+.menuItem {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.price {
+    margin-top: 0px;
 }
 
 ul {
