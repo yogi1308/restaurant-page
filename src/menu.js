@@ -51,6 +51,16 @@ export default function loadMenu() {
 
   const headline = document.createElement('h1');
   headline.textContent = 'Our Menu';
+
+  const menuItems = document.createElement('ul');
+
+  const items = ['Signature Ramen', 'Toppings & Add-ons', 'Side Dishes', 'Beverages'];
+  items.forEach((item) => {
+    const menuCategory = document.createElement('li');
+    menuCategory.classList.add('menuCategory')
+    menuCategory.textContent = item;
+    menuItems.appendChild(menuCategory);
+  });
   
 
   const imageDiv = document.createElement('div');
@@ -63,19 +73,9 @@ export default function loadMenu() {
   image.src = restaurantImage; // Replace with a valid image path
   image.alt = 'Restaurant';
 
-  const description = document.createElement('p');
-  description.textContent = 'Ichiraku Ramen has been serving the finest bowls of ramen for years, blending tradition and innovation. Our warm, inviting space welcomes ramen lovers to savor the authentic flavors of Japan, inspired by our love for the art of cooking.';
-
-  const visit = document.createElement('h1')
-  visit.textContent = 'Why Ichiraku Ramen?'
-
-  const visitDescription = document.createElement('p')
-  visitDescription.textContent = 'Our ramen isn\'t just food; it\'s an experience. With high-quality ingredients, exceptional service, and a cozy atmosphere, we offer more than a meal — we bring people together. Our commitment to excellence has made us a beloved name among ramen enthusiasts.'
 
   contentText.appendChild(headline);
-  contentText.appendChild(description);
-  contentText.appendChild(visit)
-  contentText.appendChild(visitDescription)
+  contentText.appendChild(menuItems)
   content.appendChild(contentText);
   imageDiv.appendChild(image);
   content.appendChild(imageDiv);

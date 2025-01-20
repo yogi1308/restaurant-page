@@ -96,7 +96,7 @@ img {
 
 body {
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /* When the container wraps (screen too small), center the imageDiv */
@@ -135,6 +135,20 @@ nav {
 .waveSVG {
     width: 600px;
     height: 500px;
-    position: absolute;
+    position:fixed;
     bottom: -50px;
+}
+
+
+
+
+
+
+.menuCategory {
+    list-style-type: none;
+    border-bottom: 2px dotted black;
+}
+
+ul {
+    padding: 0px;
 }
