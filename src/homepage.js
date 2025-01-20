@@ -1,4 +1,4 @@
-import restaurantImage from "./images-and-fonts/7031df6aded58282ed3a5f21936fab82.jpg"
+import restaurantImage from "./images-and-fonts/edited.png"
 import cloud from "./images-and-fonts/noun-japan-cloud-6729222.svg";
 import cloud2 from "./images-and-fonts/noun-cloud-5390848.svg";
 import wave from "./images-and-fonts/4949956_94229.svg";

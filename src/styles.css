@@ -96,7 +96,7 @@ body {
 }
 
 /* When the container wraps (screen too small), center the imageDiv */
-@media (max-width: 980px) {
+@media (max-width: 1000px) {
     .contentText {
         flex-basis: 100%; /* Takes full width on smaller screens */
         text-align: center;
