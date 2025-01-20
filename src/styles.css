@@ -29,6 +29,10 @@ body {
     min-width: 350px; /* This ensures text has minimum width before wrapping */
     z-index: 0;
     margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center; /* Optional: Center-align the text */
+
 }
 
 .contentText h1 {
@@ -121,6 +125,7 @@ button {
 
 button:hover {
     border-bottom: 2px solid #f8af82;
+    cursor: pointer;
 }
 
 nav {
