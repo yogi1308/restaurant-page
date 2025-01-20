@@ -3,7 +3,7 @@ import cloud from "./images-and-fonts/noun-japan-cloud-6729222.svg";
 import cloud2 from "./images-and-fonts/noun-cloud-5390848.svg";
 import wave from "./images-and-fonts/4949956_94229.svg";
 
-export default function loadHome() {
+export default function loadContact() {
   const content = document.querySelector('#content');
   content.textContent = ''; // Clear existing content
 
@@ -64,18 +64,10 @@ export default function loadHome() {
   image.alt = 'Restaurant';
 
   const description = document.createElement('p');
-  description.textContent = 'Ichiraku Ramen has been serving the finest bowls of ramen for years, blending tradition and innovation. Our warm, inviting space welcomes ramen lovers to savor the authentic flavors of Japan, inspired by our love for the art of cooking.';
-
-  const visit = document.createElement('h1')
-  visit.textContent = 'Why Ichiraku Ramen?'
-
-  const visitDescription = document.createElement('p')
-  visitDescription.textContent = 'Our ramen isn\'t just food; it\'s an experience. With high-quality ingredients, exceptional service, and a cozy atmosphere, we offer more than a meal — we bring people together. Our commitment to excellence has made us a beloved name among ramen enthusiasts.'
+  description.textContent = 'Bro it\'s a fake website made to practice webpacking and ES6 modules, what do you want from me?';
 
   contentText.appendChild(headline);
   contentText.appendChild(description);
-  contentText.appendChild(visit)
-  contentText.appendChild(visitDescription)
   content.appendChild(contentText);
   imageDiv.appendChild(image);
   content.appendChild(imageDiv);
