@@ -86,6 +86,10 @@ body {
     padding: 0px;
     align-self: flex-end;
     margin: 0 auto; /* Centers when wrapped */
+    position: sticky;
+    bottom: 0px;
+    right: 0px;
+    z-index: -1;
 }
 
 img {
@@ -101,7 +105,7 @@ body {
 }
 
 /* When the container wraps (screen too small), center the imageDiv */
-@media (max-width: 1000px) {
+@media (max-width: 1020px) {
     .contentText {
         flex-basis: 100%; /* Takes full width on smaller screens */
         text-align: center;
@@ -111,6 +115,10 @@ body {
     }
     .waveSVG {
         display: none;
+    }
+
+    .imageDiv {
+        position: static;
     }
 }
 
@@ -162,11 +170,13 @@ nav {
     margin: 10px;
     display: flex;
     justify-content: space-between;
-    text-align: center;
+    text-align: left;
+    gap: 10px;
+    align-items: center;
 }
 
 .price {
-    margin-top: 0px;
+    margin: 0px;
 }
 
 ul {
