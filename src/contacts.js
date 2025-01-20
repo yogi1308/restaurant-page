@@ -1,3 +1,4 @@
+
 export default function loadContact() {
     const content = document.querySelector('#content');
     content.textContent = ''; // Clear existing content

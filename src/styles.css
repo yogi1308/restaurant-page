@@ -1,4 +1,135 @@
+@font-face {
+    font-family: Marker;
+    src: url(images-and-fonts/Permanent_Marker/PermanentMarker-Regular.ttf);
+}
+
+@font-face{
+    font-family: Brush;
+    src: url(images-and-fonts/Caveat_Brush,Permanent_Marker/Caveat_Brush/CaveatBrush-Regular.ttf);
+}
+
 body {
-    background-color: black;
-    color: white;
+    /* background: url(./7031df6aded58282ed3a5f21936fab82.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position-x: right; */
+    background-color: #fee4c7;
+    font-family: Marker, sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    justify-content: center;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contentText {
+    flex: 1; /* This makes it take remaining space */
+    min-width: 350px; /* This ensures text has minimum width before wrapping */
+    z-index: 0;
+    margin-left: 10px;
+}
+
+.contentText h1 {
+    font-size: 32px;
+}
+
+.contentText p {
+    font-size:20px;
+}
+
+.cloudDiv {
+    width: 100vw;
+    position: absolute;
+    height: 90vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.cloud-image {
+    height: 500px;
+    width: 50%;
+    position: relative;
+    top: -180px;
+    right: 100px;
+}
+
+.cloud-image2 {
+    height: 350px;
+    width: 50%;
+    position: relative;
+    top: -120px;
+    right: -100px;
+}
+
+.cloud-image3 {
+    height: 700px;
+    width: 100%;
+    position: relative;
+    top: -675px;
+    right: -100px;
+}
+
+
+.imageDiv {
+    width: fit-content;
+    aspect-ratio: 522/457;
+    padding: 0px;
+    align-self: flex-end;
+    margin: 0 auto; /* Centers when wrapped */
+}
+
+img {
+    max-width: 100%;
+    z-index: -2;
+    height: 95vh;
+    min-height: 400px;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+/* When the container wraps (screen too small), center the imageDiv */
+@media (max-width: 980px) {
+    .contentText {
+        flex-basis: 100%; /* Takes full width on smaller screens */
+        text-align: center;
+    }
+    body {
+        overflow-y: scroll;
+    }
+    .waveSVG {
+        display: none;
+    }
+}
+
+button {
+    border: none;
+    background-color: #fee4c7;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border-bottom: 2px solid #fee4c7;
+    font-family: Brush, sans-serif;
+    font-size: 24px;
+}
+
+button:hover {
+    border-bottom: 2px solid #f8af82;
+}
+
+nav {
+    text-align: center;
+}
+
+.waveSVG {
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    bottom: -50px;
 }
